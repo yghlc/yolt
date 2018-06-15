@@ -16,7 +16,7 @@ extern void predict_classifier(char *datacfg, char *cfgfile, char *weightfile, c
 extern void test_detector(char *datacfg, char *cfgfile, char *weightfile, char *filename, float thresh);
 extern void run_voxel(int argc, char **argv);
 extern void run_yolo(int argc, char **argv);
-extern void run_yolt(int argc, char **argv);	// AVE
+//extern void run_yolt(int argc, char **argv);	// AVE
 extern void run_yolt2(int argc, char **argv);   // AVE
 extern void run_detector(int argc, char **argv);
 extern void run_coco(int argc, char **argv);
@@ -377,7 +377,8 @@ int main(int argc, char **argv)
     } else if (0 == strcmp(argv[1], "yolo")){
         run_yolo(argc, argv);
     } else if (0 == strcmp(argv[1], "yolt")){ 		// AVE
-        run_yolt(argc, argv);
+//        run_yolt(argc, argv);
+        fprintf(stderr, "An old option, have been removed: %s\n", argv[1]);
     } else if (0 == strcmp(argv[1], "yolt2")){ 		// AVE
         run_yolt2(argc, argv);
     } else if (0 == strcmp(argv[1], "voxel")){
